@@ -185,7 +185,7 @@ class PSCPayment:
                 self.error['message'] = 'The amount for this transaction exceeds the maximum amount. The maximum amount is 1000 EURO (equivalent in other currencies)'
             elif self.getResponse()['number'] == 3001:
                 self.error['number'] = self.getResponse()['number']
-                self.error['message'] = 'Transaction could not be initiated because the account is inactive.'
+                self.error['message'] = 'Transaction could not be initiated due to connection problems. If the problem persists, please contact our support.'
             elif self.getResponse()['number'] == 2002:
                 self.error['number'] = self.getResponse()['number']
                 self.error['message'] = 'payment id is unknown.'
